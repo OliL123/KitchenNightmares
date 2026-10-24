@@ -151,4 +151,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aae6dc259fbe92342ad86f9ec4b02cd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Supply
-  item: {fileID: 7330622889004331965, guid: b7d59ad2b37ddfa40884379e21d894de, type: 3}
+  itemPrefab: {fileID: 7330622889004331965, guid: b7d59ad2b37ddfa40884379e21d894de, type: 3}
+  gives: {fileID: 11400000, guid: 139b1d3ed40aa9b4182fc7a8148419fa, type: 2}

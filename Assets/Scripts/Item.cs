@@ -9,16 +9,17 @@ public class Item : MonoBehaviour
     [SerializeField] ItemData data;
 
     public ItemData Data => data;
+    public float CookProgress { get; set; }
+
 
     void Awake() => Apply();
 
     // Updates the look in the editor as soon as you change the data.
     void OnValidate() => Apply();
-
-    // Turn this into a different item, e.g. when a station cooks it.
     public void SetData(ItemData newData)
     {
         data = newData;
+        CookProgress = 0f;   // a new form starts from scratch
         Apply();
     }
 

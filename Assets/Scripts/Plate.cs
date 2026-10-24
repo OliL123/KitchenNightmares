@@ -20,8 +20,8 @@ public class Plate : MonoBehaviour
 
     public List<ItemData> Ingredients => contents.ConvertAll(item => item.Data);
 
-    public bool CanAdd(Item item) => contents.Count < Capacity && item.Data != null && item.Data.canPlate;
-
+    public bool CanAdd(ItemData data) => contents.Count < Capacity && data != null && data.canPlate;
+    public bool CanAdd(Item item) => CanAdd(item.Data);
     public bool TryAdd(Item item)
     {
         if (!CanAdd(item)) return false;
