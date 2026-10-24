@@ -17,5 +17,8 @@ public class Counter : Station
     {
         if (held == null && hands.Held != null) held = hands.PutDown(slot);
         else if (held != null && hands.Held == null) { hands.PickUp(held); held = null; }
+        // Both hold something: try plating. If the hands still hold something afterwards,
+        // they had the plate and took our ingredient, so the counter is now empty.
+        else if (held != null && hands.TryPlateWith(held) && hands.Held != null) held = null;
     }
 }

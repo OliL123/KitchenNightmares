@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Rendering;
 
 // Anything that can be carried: in the chef's hands, on a station, or loose on the floor.
 // What it is comes from its ItemData; this just puts it in the world.
@@ -26,7 +27,9 @@ public class Item : MonoBehaviour
     public void SetLoose(bool loose)
     {
         GetComponent<Collider2D>().enabled = loose;
-        GetComponent<SpriteRenderer>().sortingOrder = loose ? 0 : 1;
+        int order = loose ? 0 : 1;
+        if (TryGetComponent(out SortingGroup group)) group.sortingOrder = order;
+        else GetComponent<SpriteRenderer>().sortingOrder = order;
     }
 
     void Apply()

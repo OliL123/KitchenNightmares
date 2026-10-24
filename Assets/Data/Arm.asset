@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ItemData
   displayName: Arm
   sprite: {fileID: 0}
-  tint: {r: 0.6745283, g: 0.34999108, b: 0.34999108, a: 1}
+  tint: {r: 0.9150943, g: 0.67768776, b: 0.67768776, a: 1}
   canPlate: 0
   plateLayer: 0

@@ -21,8 +21,21 @@ public class PlayerHands : MonoBehaviour
         Collider2D target = FindTarget();
 
         if (target != null && target.TryGetComponent(out Station station)) station.Interact(this);
+        else if (target != null && target.TryGetComponent(out Item item)) InteractWithFloorItem(item);
         else if (Held != null) Drop();
-        else if (target != null && target.TryGetComponent(out Item item)) PickUp(item);
+    }
+    void InteractWithFloorItem(Item item)
+    {
+        if (Held == null) PickUp(item);
+        else if (!TryPlateWith(item)) Drop();
+    }
+
+    // Plating between what we're holding and another item, whichever one is the plate.
+    public bool TryPlateWith(Item other)
+    {
+        if (Held.TryGetComponent(out Plate plate)) return plate.TryAdd(other);
+        if (other.TryGetComponent(out plate) && plate.TryAdd(Held)) { Release(); return true; }
+        return false;
     }
 
     public void PickUp(Item item)
@@ -37,6 +50,14 @@ public class PlayerHands : MonoBehaviour
         Item item = Held;
         Held = null;
         Attach(item, to);
+        return item;
+    }
+
+    // Let go without putting it anywhere; whoever called this now owns the item.
+    public Item Release()
+    {
+        Item item = Held;
+        Held = null;
         return item;
     }
 
