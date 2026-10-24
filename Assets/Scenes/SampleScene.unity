@@ -1171,7 +1171,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3307517952911475944, guid: 57ff38753f0812346bf1a7043d2aa78c, type: 3}
       propertyPath: m_Name
-      value: SacrificeBox
+      value: SacrificePen
       objectReference: {fileID: 0}
     - target: {fileID: 5959299019598621074, guid: 57ff38753f0812346bf1a7043d2aa78c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1212,6 +1212,14 @@ PrefabInstance:
     - target: {fileID: 5959299019598621074, guid: 57ff38753f0812346bf1a7043d2aa78c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7144448835273290029, guid: 57ff38753f0812346bf1a7043d2aa78c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 9098663437384540266, guid: 57ff38753f0812346bf1a7043d2aa78c, type: 3}
+      propertyPath: m_Size.x
+      value: 1.25
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
