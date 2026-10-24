@@ -11,9 +11,9 @@ public class PlayerMovement : MonoBehaviour
 
     void Awake() => body = GetComponent<Rigidbody2D>();
 
-    // Player Input calls this whenever the Move action changes (WASD, arrows, gamepad stick).
     public Vector2 Facing { get; private set; } = Vector2.down;
 
+    // Player Input calls this whenever the Walk action changes.
     void OnWalk(InputValue value)
     {
         walk = value.Get<Vector2>();

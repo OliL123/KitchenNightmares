@@ -3,7 +3,7 @@ using UnityEngine;
 // Endless supply of one ingredient, like the sacrifice pen or the cheese box.
 public class Supply : Station
 {
-    [SerializeField] Item itemPrefab;   // the generic Item prefab
+    [SerializeField] Item itemPrefab;   // usually the generic Item prefab; the plate stack uses Plate
     [SerializeField] ItemData gives;    // what this spot hands out
 
     public override void Interact(PlayerHands hands)

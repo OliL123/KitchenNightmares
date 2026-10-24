@@ -10,9 +10,15 @@ public class DishData : ScriptableObject
     // Exact match: same ingredients and the same number of each, in any order.
     public bool Matches(IReadOnlyList<ItemData> plate)
     {
-        if (plate.Count != ingredients.Count) return false;
         var needed = new Dictionary<ItemData, int>();
-        foreach (ItemData item in ingredients) needed[item] = needed.GetValueOrDefault(item) + 1;
+        int total = 0;
+        foreach (ItemData item in ingredients)
+        {
+            if (item == null) continue;   // an empty slot left in the Inspector
+            needed[item] = needed.GetValueOrDefault(item) + 1;
+            total++;
+        }
+        if (plate.Count != total) return false;
         foreach (ItemData item in plate)
         {
             if (!needed.TryGetValue(item, out int count) || count == 0) return false;
@@ -25,7 +31,9 @@ public class DishData : ScriptableObject
     void OnValidate()
     {
         foreach (ItemData item in ingredients)
-            if (item != null && !item.canPlate)
-                Debug.LogWarning($"{name} needs {item.displayName}, but that can't go on a plate.", this);
+        {
+            if (item == null) Debug.LogWarning($"{name} has an empty ingredient slot.", this);
+            else if (!item.canPlate) Debug.LogWarning($"{name} needs {item.displayName}, but that can't go on a plate.", this);
+        }
     }
 }
