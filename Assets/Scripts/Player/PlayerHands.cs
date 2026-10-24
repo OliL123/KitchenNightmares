@@ -43,7 +43,7 @@ public class PlayerHands : MonoBehaviour
     // Show which station or item Interact would use right now.
     void Update()
     {
-        Collider2D target = FindTarget();
+        Collider2D target = Busy != null ? null : FindTarget();
         highlight.enabled = target != null;
         if (target == null) return;
         Bounds bounds = target.bounds;
@@ -53,12 +53,18 @@ public class PlayerHands : MonoBehaviour
 
     void OnInteract(InputValue value)
     {
-        if (!value.isPressed) return;   // only on press, not on release
+        if (!value.isPressed || Busy != null) return;   // only on press; ignored while locked in
         Collider2D target = FindTarget();
 
         if (target != null && target.TryGetComponent(out Station station)) station.Interact(this);
         else if (target != null && target.TryGetComponent(out Item item)) InteractWithFloorItem(item);
         else if (Held != null) Drop();
+    }
+
+    // Esc / B: bail out of whatever station you're locked into. Its progress is kept.
+    void OnCancel(InputValue value)
+    {
+        if (value.isPressed && Busy != null) Busy.Leave();
     }
 
     void InteractWithFloorItem(Item item)
@@ -160,4 +166,7 @@ public class PlayerHands : MonoBehaviour
         renderer.enabled = false;
         return renderer;
     }
+
+    public ActiveStation Busy { get; set; }   // set while locked into a station (cutting, chanting...)
+    public PlayerMovement Movement => movement;
 }

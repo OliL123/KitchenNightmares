@@ -11,6 +11,8 @@ public class Item : MonoBehaviour
     public ItemData Data => data;
     public float CookProgress { get; set; }
 
+    // 0 (sloppy) to 1 (perfect), from minigame grades. Survives SetData, so it follows the food.
+    public float Quality { get; set; } = 1f;
 
     void Awake() => Apply();
 

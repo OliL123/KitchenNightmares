@@ -361,7 +361,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4.5
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -739,6 +739,63 @@ PolygonCollider2D:
       - {x: 0.5, y: -0.5}
       - {x: 0.5, y: 0.5}
   m_UseDelaunayMesh: 1
+--- !u!1001 &1410745173
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 3242219048737369953, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_Name
+      value: Butcher's Block
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.6145568
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -2.0012658
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7805076551882426745, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ba19a28f2a114074b93a6aea08b99bc7, type: 3}
 --- !u!1 &1529121284
 GameObject:
   m_ObjectHideFlags: 0
@@ -834,7 +891,7 @@ MonoBehaviour:
     CustomLookAtTarget: 0
   Lens:
     FieldOfView: 34
-    OrthographicSize: 5
+    OrthographicSize: 4.5
     NearClipPlane: 0.3
     FarClipPlane: 1000
     Dutch: 0
@@ -1205,6 +1262,7 @@ MonoBehaviour:
   interactLayers:
     serializedVersion: 2
     m_Bits: 192
+  highlightColor: {r: 1, g: 1, b: 1, a: 0.35}
 --- !u!210 &2050650441
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -1468,3 +1526,4 @@ SceneRoots:
   - {fileID: 762927424}
   - {fileID: 4352020544113609621}
   - {fileID: 1610353690}
+  - {fileID: 1410745173}

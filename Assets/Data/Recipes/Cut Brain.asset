@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 854df2f87b33233448dde9cf7887c287, type: 3}
+  m_Name: Cut Brain
+  m_EditorClassIdentifier: Assembly-CSharp::CutRecipe
+  input: {fileID: 11400000, guid: 5116522b8ee591b4487b9fc854ef825f, type: 2}
+  result: {fileID: 11400000, guid: d03a1529a6c8a7447990e14941851532, type: 2}
+  leftover: {fileID: 0}
+  cutCount: 4
+  cutDirection: {x: 0, y: -1}
