@@ -15,5 +15,9 @@ MonoBehaviour:
   input: {fileID: 11400000, guid: ca22f4201f6ef9949a1abd0d76f9a710, type: 2}
   result: {fileID: 11400000, guid: 8f41f44fae9c435e867d11293d1145fa, type: 2}
   leftover: {fileID: 11400000, guid: 0449b1482b1c4c529f8e72eb172519c4, type: 2}
-  cutCount: 5
-  cutDirection: {x: 0.70710677, y: -0.70710677}
+  cuts:
+  - {x: 0.70710677, y: -0.70710677}
+  - {x: -0.70710677, y: -0.70710677}
+  - {x: 0.70710677, y: -0.70710677}
+  - {x: -0.70710677, y: -0.70710677}
+  - {x: 0.70710677, y: -0.70710677}

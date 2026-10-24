@@ -144,10 +144,11 @@ MonoBehaviour:
   leftoverSlot: {fileID: 3666274501117646701}
   itemPrefab: {fileID: -1513354572114417577, guid: 44c3867d3dd4b7a44b95e993be02a444, type: 3}
   bar: {fileID: 842364685905518975}
+  boardPrefab: {fileID: 6490507522839109344, guid: 1dfd2f3df017b1340bd5e6d6551a8348, type: 3}
+  boardOffset: {x: 0, y: 1.9}
   recipes:
   - {fileID: 11400000, guid: 8259c774a55f4261b942d744b9fd4e60, type: 2}
   - {fileID: 11400000, guid: b59bbd81d9e84a538317fa5116f0a75f, type: 2}
-  placeholderCutTime: 0.5
 --- !u!1 &7471614905118696779
 GameObject:
   m_ObjectHideFlags: 0

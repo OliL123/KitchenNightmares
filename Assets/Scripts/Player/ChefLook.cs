@@ -5,9 +5,7 @@ using UnityEngine;
 [RequireComponent(typeof(SpriteRenderer))]
 public class ChefLook : MonoBehaviour
 {
-    [SerializeField] Sprite front, frontLeft, frontRight, back, backLeft, backRight;
-    [SerializeField] float turnSpeed = 720f;   // degrees per second; lower = slower turns
-
+    [SerializeField] Sprite front, frontLeft, frontRight, back, backLeft, backRight, left, right; [SerializeField] float turnSpeed = 720f;   // degrees per second; lower = slower turns
     PlayerMovement movement;
     SpriteRenderer spriteRenderer;
     float shownAngle = -90f;   // the direction the sprite currently shows, in degrees (-90 = down)
@@ -33,9 +31,9 @@ public class ChefLook : MonoBehaviour
 
     Sprite PoseFor(Vector2 facing)
     {
-        bool left = facing.x < -0.5f, right = facing.x > 0.5f;
-        if (facing.y > 0.5f) return left ? backLeft : right ? backRight : back;
-        if (facing.y < -0.5f) return left ? frontLeft : right ? frontRight : front;
-        return facing.x < 0f ? frontLeft : frontRight;   // no side poses yet: turn towards the camera
+        bool toLeft = facing.x < -0.5f, toRight = facing.x > 0.5f;
+        if (facing.y > 0.5f) return toLeft ? backLeft : toRight ? backRight : back;
+        if (facing.y < -0.5f) return toLeft ? frontLeft : toRight ? frontRight : front;
+        return facing.x < 0f ? left : right;
     }
 }
