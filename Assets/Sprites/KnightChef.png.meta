@@ -228,7 +228,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_BackRight
+      name: Knight_BackLeft
       rect:
         serializedVersion: 2
         x: 621
@@ -250,7 +250,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Knight_BackLeft
+      name: Knight_BackRight
       rect:
         serializedVersion: 2
         x: 779
@@ -335,8 +335,8 @@ TextureImporter:
       Knight_Back: 1225330135
       Knight_FrontLeft: -1115230466
       Knight_FrontRight: -2013610557
-      Knight_BackRight: 1089825768
-      Knight_BackLeft: -1006197949
+      Knight_BackLeft: 1089825768
+      Knight_BackRight: -1006197949
       Knight_Left: -1792189340
       Knight_Right: -421397445
   mipmapLimitGroupName: 
